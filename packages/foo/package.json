@@ -1,0 +1,34 @@
+{
+  "name": "foo",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "father build",
+    "dev": "father dev"
+  },
+  "main": "lib/index.js",
+  "module": "es/index.js",
+  "types": "es/index.d.ts",
+  "files": [
+    "dist",
+    "lib",
+    "es"
+  ],
+  "exports": {
+    ".": {
+      "types": "./es/index.d.ts",
+      "import": {
+        "node": "./lib/index.js",
+        "default": "./es/index.js"
+      },
+      "require": "./lib/index.js"
+    },
+    "./es/*": "./es/*",
+    "./lib/*": "./lib/*",
+    "./dist/*": "./dist/*",
+    "./utils": {
+      "types": "./es/utils/index.d.ts",
+      "import": "./es/utils/index.js",
+      "require": "./lib/utils/index.js"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "father-bug-report",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "turbo dev --no-cache --continue --filter './packages/*'",
+    "build": "turbo build --filter './packages/*'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "father": "^4.3.1",
+    "turbo": "^1.10.12"
+  }
+}

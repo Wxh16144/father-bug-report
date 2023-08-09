@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "sourceMap": true,
+    "target": "ESNext",
+    "module": "esnext",
+    "jsx": "react-jsx",
+    "types": ["vitest/globals"],
+    "declaration": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "foo": ["packages/foo/src/index.ts"],
+      "foo/*": ["packages/foo/src/*"],
+      "bar": ["packages/bar/src/index.tsx"],
+      "bar/*": ["packages/bar/src/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["**/src/**/*"]
+}
